@@ -47,7 +47,7 @@ WeatherConditions. The data will be stored using a doubly linked list and input 
 
 This section aims to describe the components of the project solution using a bottom-up approach.
 
-## [Date](#compositions/Date.h)
+## [Date](compositions/Date.h)
 
 This class is used to represent a date consisting of a day, month, and year. This class provides functionality for parsing dates from string input, writing dates to output streams, and comparing dates.
 
@@ -66,9 +66,9 @@ To aid the search function, Date class also implements a set of comparison funct
 - `isGreaterThan`: compares two (2) "dates" for the latest date. "dates" in this sense means instances of the Date class which has a day, month, and year.
 - `equals`: checks if two (2) dates are the same.
 
-Read through the [Date.cpp](#compositions/Date.cpp) file to find out more about the implementation of the `Date` class.
+Read through the [Date.cpp](compositions/Date.cpp) file to find out more about the implementation of the `Date` class.
 
-## [Location](#compositions/Location.h)
+## [Location](compositions/Location.h)
 
 The `Location` class represents a geographical location with two properties: city and province. This class provides methods to read, write, parse, and compare locations. It also provides a method to determine if a location is a sea state
 
@@ -92,9 +92,9 @@ To aid the search function, this class implements two (2) overloads of a read fu
 
 This class also implements a write function which prints out a string representation of the location in the format `[city, province]`
 
-Read through the [Location.cpp](#compositions/Location.cpp) file to find out more about the implementation of the `Location` class.
+Read through the [Location.cpp](compositions/Location.cpp) file to find out more about the implementation of the `Location` class.
 
-## [Temperature](#compositions/Temperature.h)
+## [Temperature](compositions/Temperature.h)
 
 The `Temperature` class represents the high and low temperatures of a location.
 
@@ -102,9 +102,9 @@ The Temperature class contains a custom constructor to take in the integer repre
 
 This class implements a write function which prints out a string representation of the temperature in the format `[low high]`
 
-Read through the [Temperature.cpp](#compositions/Temperature.cpp) file to find out more about the implementation of the `Temperature` class.
+Read through the [Temperature.cpp](compositions/Temperature.cpp) file to find out more about the implementation of the `Temperature` class.
 
-## [PrecipitationType](#compositions/PrecipitationType.h)
+## [PrecipitationType](compositions/PrecipitationType.h)
 
 This class represents the type and amount of precipitation. It is the base class for `Rain`, `Snow`, `Hail`, and `FreezingRain` which represent the various types of precipitation within the project scope.
 
@@ -114,9 +114,9 @@ This class represents the type and amount of precipitation. It is the base class
 
 All subclasses override the `write()` function to output their respective precipitation types and amounts (if measureable).
 
-Read through the [PrecipitationType.cpp](#compostitions/PrecipitationType.cpp) file to find out more about the implementation of the `PrecipitationType` class.
+Read through the [PrecipitationType.cpp](compostitions/PrecipitationType.cpp) file to find out more about the implementation of the `PrecipitationType` class.
 
-## [Utils](#utils/utils.h)
+## [Utils](utils/utils.h)
 
 This is a static class that holds functions that do not belong to a particular class and are used throughout the program. 
 
@@ -124,7 +124,7 @@ Such function is the `toUpper` function which, unlike the standard iostream `tou
 
 `proofRead`: This function prevents the program from crashing from user input error such as character instead of number. It is used to read integer values from an input stream (e.g. cin) and check if the input is within a certain range. It takes three arguments: an output stream (e.g. cout), an input stream (e.g. cin), and a reference to an integer variable. If the input value is not within the range specified by the lowerbound and upperbound parameters, the function will output a warning message to the output stream.
 
-## [WeatherCondition](#WeatherConditions.h)
+## [WeatherCondition](WeatherConditions.h)
 
 This class is responsible for representing weather data which includes date, location, and temperature and additional data depending on the weather condition.
 
@@ -132,29 +132,29 @@ This class is the base class for the other types of Weather Conditions including
 
 It includes the properties of `date`, `location`, and `temperature` along with virtual read and write functions.
 
-### [Precipitation](#WeatherConditions.h)
+### [Precipitation](WeatherConditions.h)
 
 This class extends the `WeatherCondition` class and includes an additional property of [PrecipitationType](#precipitationtype).
 
 The read function of this class calls the read functions of its base class and the PrecipitationType class to set its data via an istream.
 
-### [Wind](#WeatherConditions.h)
+### [Wind](WeatherConditions.h)
 
 The Wind class extends the `WeatherCondition` class and includes additional properties of `wind speed`, `direction`, `Beaufort number`, and `description`. Its constructors, takes in the `wind speed`, and `direction`.
 
 The `Beafort number` is set based on the wind speed.
 
-### [SeaState](#WeatherConditions.h)
+### [SeaState](WeatherConditions.h)
 
 The `SeaState` class extends the `WeatherCondition` class and includes additional properties including wave `height`, `period`, and water `temperature`.
 
-Read through the [WeatherConditions.cpp](#WeatherConditions.cpp) file to find out more about the implementation of the `WeatherCondition` classes.
+Read through the [WeatherConditions.cpp](WeatherConditions.cpp) file to find out more about the implementation of the `WeatherCondition` classes.
 
-## [WeatherStore](#WeatherStore.h)
+## [WeatherStore](WeatherStore.h)
 
 This class is responsible for storing and managing weather data in a doubly linked list. It contains methods for appending new data, inserting data in sorted order, deleting data, and searching for data by `date` or `location`. The `WeatherStore` class uses the `WeatherCondition` and `utils` class for its implementation.
 
-### [Entry](#WeatherStore.h)
+### [Entry](WeatherStore.h)
 
 The `Entry` class is similar to a `Node` class used for storing WeatherCondition data and creating the doubly linked list structure.
 
@@ -162,9 +162,9 @@ A feature of the `WeatherStore` class is that it allows the user to specify whet
 
 `sort`: If `true`, new entries are inserted in sorted order. If `false` new entries are appended to the end of the list.
 
-Read through the [WeatherStore.cpp](#WeatherStore.cpp) file to find out more about the implementation of the `WeatherStore` class.
+Read through the [WeatherStore.cpp](WeatherStore.cpp) file to find out more about the implementation of the `WeatherStore` class.
 
-## [WeatherMan](#compositions/WeatherMan.h)
+## [WeatherMan](compositions/WeatherMan.h)
 
 This class is a singleton utility class used to manage weather reports provided using the `WeatherStore` class. This class is responsible for importing, inserting, searching, deleting, and exporting weather data in its `WeatherStore` instance.
 
@@ -209,13 +209,13 @@ int main()
 }
 ```
 
-Read through the [WeatherMan.cpp](#WeatherMan.cpp) file to find out more about the implementation of the `WeatherMan` utility class.
+Read through the [WeatherMan.cpp](WeatherMan.cpp) file to find out more about the implementation of the `WeatherMan` utility class.
 
 # Data Formats
 
 This version of the project solution parses a text file for a specific type of weather condition. Hence, data for different types of Weather Conditions have to be provided in **separate** text files. The format for a single data line in a text for each weather condition type has been provided below:
 
-## Precipitation
+## [Precipitation](inputs/precipitationInput.txt)
 
 **format description:** `date` `location` `low temperature` `high temperature` `type` `amount`
 
@@ -223,7 +223,7 @@ This version of the project solution parses a text file for a specific type of w
 
 **example:** `25/03/2023` `Halifax,NS` `-1` `2` `rain` `37`
 
-## Wind
+## [Wind](inputs/windInput.txt)
 
 **format description:** `date` `location` `low temperature` `high temperature` `wind speed` `wind direction`
 
@@ -231,7 +231,7 @@ This version of the project solution parses a text file for a specific type of w
 
 **example:** `25/03/2023` `Halifax,NS` `-1` `2` `19` `126`
 
-## Sea State
+## [Sea State](inputs/seastateInput.txt)
 
 **format description:** `date` `location` `low temperature` `high temperature` `wave height` `wave period` `water temperature`
 
@@ -239,7 +239,7 @@ This version of the project solution parses a text file for a specific type of w
 
 **example:** `25/03/2023` `Halifax,NS` `-1` `2` `0.5` `2` `7`
 
-## All
+## [All](dataassemble.txt)
 
 **format description:** `filepath` `type`
 
@@ -259,7 +259,7 @@ This option allows the user to import weather data from a file. The user can cho
 
 If you choose this option, you would be prompted to enter the report type. You can then enter either `precipitation`, `wind`, `sea`, or `all`.
 
-If you select `all`, you would need to provide a single file that contains a list of the filepath and type of all the files you want to import data from. See the [dataformat](#all) for files of type `all`.
+If you select `all`, you would need to provide a single file that contains a list of the filepath and type of all the files you want to import data from. See the [dataformat](all) for files of type `all`.
 
 `Enter report type:` (precipitation, wind, sea, all)
 
