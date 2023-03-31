@@ -218,5 +218,5 @@ void SeaState::write(ostream &out) const
   out << "Sea State:: ";
   WeatherCondition::write(out);
   cout << fixed;
-  cout << setprecision(2) << height << "m " << period << " " << waterTemperature << "C ";
+  cout << setprecision(2) << "[" << height << " m] " << "[" << period << " s] " << "[" << waterTemperature << "C] ";
 }

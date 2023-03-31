@@ -4,8 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "WeatherConditions.h"
-#include "utils/utils.h"
+#include "../weatherconditions/WeatherConditions.h"
+#include "../utils/utils.h"
 
 using namespace std;
 using namespace utils;

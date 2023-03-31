@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "WeatherStore.h"
+#include "weatherstore/WeatherStore.h"
 
 class WeatherMan
   {

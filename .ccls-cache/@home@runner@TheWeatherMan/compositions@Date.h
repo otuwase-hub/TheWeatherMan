@@ -20,7 +20,7 @@ class Date
     void write(ostream &out) const;
     void read(istream &in);
     void parse(string date);
-    static bool isGreaterThan(Date date1, Date date2);
+    static bool isEarlierThan(Date date1, Date date2);
     static bool equals(Date date1, Date date2);
 };
 

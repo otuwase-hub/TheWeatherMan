@@ -229,13 +229,13 @@ int WeatherStore::insertSort(WeatherCondition *data)
   else
   {
     Entry *entry = new Entry(data);
-    if(Date::isGreaterThan(first->data->getDate(), data->getDate()))
+    if(Date::isEarlierThan(first->data->getDate(), data->getDate()))
     {
       entry->next = first;
       first->prev = entry;
       first = entry;
     }
-    else if(Date::isGreaterThan(data->getDate(), last->data->getDate()))
+    else if(Date::isEarlierThan(data->getDate(), last->data->getDate()))
     {
       last->next = entry;
       entry->prev = last;
@@ -247,7 +247,7 @@ int WeatherStore::insertSort(WeatherCondition *data)
       id = 2;
       Entry *current = first;
       Entry *temp = first->next;
-      while(temp != NULL && Date::isGreaterThan(data->getDate(), temp->data->getDate()))
+      while(temp != NULL && Date::isEarlierThan(data->getDate(), temp->data->getDate()))
       {
         id++;
         current = current->next;

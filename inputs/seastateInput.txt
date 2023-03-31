@@ -1,0 +1,7 @@
+24/06/2023 Victoria,BC -2 6 0.7 3 8
+12/09/2023 StJohns,NL 3 8 1.2 4 6
+05/07/2023 Yellowknife,NT 1 12 0.8 2 3
+19/05/2023 Saskatoon,SK -3 5 0.5 3 10
+08/08/2023 Montreal,QC 10 22 0.6 2 16
+01/12/2023 Calgary,AB -8 -2 0.4 4 2
+17/03/2023 Iqaluit,NU -10 -4 1.5 5 1

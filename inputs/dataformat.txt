@@ -1,15 +1,14 @@
-precipitation format:
-dd/mm/yyyy city,province low_temperature(C) high_temperature(C) type amount
-type {rain, snow, freezing rain, hail, fog}
-precipitation example:
-25/03/2023 Halifax,NS -1 2 rain 37
+precipitation:
+format description: date location low temperature high temperature type amount
+format: dd/mm/yyyy city,province low(C) high(C) type amount
+example: 25/03/2023 Halifax,NS -1 2 rain 37
 
-wind format:
-dd/mm/yyyy city,province low_temperature(C) high_temperature(C) speed(km/hr) direction(degrees)
-wind example:
-25/03/2023 Halifax,NS -1 2 19 126
+wind:
+format description: date location low temperature high temperature wind speed wind direction
+format: dd/mm/yyyy city,province low(C) high(C) speed (km/hr) direction(degrees)
+example: 25/03/2023 Halifax,NS -1 2 19 126
 
-sea_state format:
-dd/mm/yyyy city,province low_temperature(C) high_temperature(C) height(m) period water_temp(C)
-sea_state example:
-25/03/2023 Halifax,NS -1 2 0.5 2 7
+sea state:
+format description: date location low temperature high temperature wave height wave period water temperature
+format: dd/mm/yyyy city,province low(C) high(C) height(m) period(s) temp(C)
+example: 25/03/2023 Halifax,NS -1 2 0.5 2 7

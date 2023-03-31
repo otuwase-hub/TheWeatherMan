@@ -1,2 +1,7 @@
-25/03/2023 Halifax,NS -4 -2 19 126
-02/08/2022 Vancouver,BC -2 12 62 280
+25/03/2023 Vancouver,BC 5 9 22 280
+26/03/2023 Toronto,ON 0 5 25 60
+27/03/2023 Halifax,NS -2 3 28 90
+28/03/2023 Montreal,QC -10 -5 20 180
+29/03/2023 Victoria,BC 6 11 18 315
+30/03/2023 Calgary,AB -2 2 30 270
+31/03/2023 St.John's,NL -4 1 24 120

@@ -1,10 +1,7 @@
-25/03/2021 Halifax,NS -1 2 freezing 37
-02/03/2022 Halifax,NS -1 2 hail 37
-05/03/2023 Oakville,ON -1 2 rain 37
-25/04/2023 Halifax,NS -1 2 fog 37
-01/03/2023 ThunderBay,ON -1 2 snow 37
-22/03/2021 Kitchener,ON -1 2 snow 9
-22/03/2021 Halifax,NS -1 2 rain 4
-16/03/2023 Kitchener,ON -1 2 freezing 13
-25/03/2020 Halifax,NS -1 2 rain 12
-25/03/2023 Halifax,NS -1 2 rain 15
+26/03/2023 Toronto,ON -4 1 hail 18
+27/03/2023 Vancouver,BC 5 9 fog 24
+28/03/2023 Montreal,QC -3 3 rain 40
+29/03/2023 Halifax,NS -1 2 freezing 28
+30/03/2023 Calgary,AB -7 -2 snow 32
+31/03/2023 Ottawa,ON -2 1 fog 25
+01/04/2023 Victoria,BC 6 10 rain 42

@@ -1,2 +1,3 @@
 inputs/precipitationInput precipitation
 inputs/windInput wind
+inputs/seastateInput sea

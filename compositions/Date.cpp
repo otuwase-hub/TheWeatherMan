@@ -63,7 +63,7 @@ void Date::parse(string date)
   this->year = stoi(year);
 }
 
-bool Date::isGreaterThan(Date date1, Date date2)
+bool Date::isEarlierThan(Date date1, Date date2)
 {
   if(date1.year != date2.year)
   {

@@ -6,10 +6,10 @@
 #include <fstream>
 #include <vector>
 
-#include "compositions/PrecipitationType.h"
-#include "compositions/Temperature.h"
-#include "compositions/Date.h"
-#include "compositions/Location.h"
+#include "../compositions/PrecipitationType.h"
+#include "../compositions/Temperature.h"
+#include "../compositions/Date.h"
+#include "../compositions/Location.h"
 
 using namespace std;
 
