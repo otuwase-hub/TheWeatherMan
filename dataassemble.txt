@@ -1,0 +1,2 @@
+inputs/precipitationInput precipitation
+inputs/windInput wind
