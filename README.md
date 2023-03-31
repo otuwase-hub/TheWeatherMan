@@ -124,7 +124,7 @@ Such function is the `toUpper` function which, unlike the standard iostream `tou
 
 `proofRead`: This function prevents the program from crashing from user input error such as character instead of number. It is used to read integer values from an input stream (e.g. cin) and check if the input is within a certain range. It takes three arguments: an output stream (e.g. cout), an input stream (e.g. cin), and a reference to an integer variable. If the input value is not within the range specified by the lowerbound and upperbound parameters, the function will output a warning message to the output stream.
 
-## [WeatherCondition](WeatherConditions.h)
+## [WeatherCondition](weatherconditions/WeatherConditions.h)
 
 This class is responsible for representing weather data which includes date, location, and temperature and additional data depending on the weather condition.
 
@@ -132,29 +132,29 @@ This class is the base class for the other types of Weather Conditions including
 
 It includes the properties of `date`, `location`, and `temperature` along with virtual read and write functions.
 
-### [Precipitation](WeatherConditions.h)
+### [Precipitation](weatherconditions/WeatherConditions.h)
 
 This class extends the `WeatherCondition` class and includes an additional property of [PrecipitationType](#precipitationtype).
 
 The read function of this class calls the read functions of its base class and the PrecipitationType class to set its data via an istream.
 
-### [Wind](WeatherConditions.h)
+### [Wind](weatherconditions/WeatherConditions.h)
 
 The Wind class extends the `WeatherCondition` class and includes additional properties of `wind speed`, `direction`, `Beaufort number`, and `description`. Its constructors, takes in the `wind speed`, and `direction`.
 
 The `Beafort number` is set based on the wind speed.
 
-### [SeaState](WeatherConditions.h)
+### [SeaState](weatherconditions/WeatherConditions.h)
 
 The `SeaState` class extends the `WeatherCondition` class and includes additional properties including wave `height`, `period`, and water `temperature`.
 
-Read through the [WeatherConditions.cpp](WeatherConditions.cpp) file to find out more about the implementation of the `WeatherCondition` classes.
+Read through the [WeatherConditions.cpp](weatherconditions/WeatherConditions.cpp) file to find out more about the implementation of the `WeatherCondition` classes.
 
-## [WeatherStore](WeatherStore.h)
+## [WeatherStore](weatherstore/WeatherStore.h)
 
 This class is responsible for storing and managing weather data in a doubly linked list. It contains methods for appending new data, inserting data in sorted order, deleting data, and searching for data by `date` or `location`. The `WeatherStore` class uses the `WeatherCondition` and `utils` class for its implementation.
 
-### [Entry](WeatherStore.h)
+### [Entry](weatherstore/WeatherStore.h)
 
 The `Entry` class is similar to a `Node` class used for storing WeatherCondition data and creating the doubly linked list structure.
 
@@ -162,7 +162,7 @@ A feature of the `WeatherStore` class is that it allows the user to specify whet
 
 `sort`: If `true`, new entries are inserted in sorted order. If `false` new entries are appended to the end of the list.
 
-Read through the [WeatherStore.cpp](WeatherStore.cpp) file to find out more about the implementation of the `WeatherStore` class.
+Read through the [WeatherStore.cpp](weatherstore/WeatherStore.cpp) file to find out more about the implementation of the `WeatherStore` class.
 
 ## [WeatherMan](compositions/WeatherMan.h)
 
